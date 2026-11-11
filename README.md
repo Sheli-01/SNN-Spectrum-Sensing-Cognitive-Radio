@@ -79,3 +79,27 @@ python src/live_snn_sensing.py
    streamlit run src/snn_dashboard.py
 
    Then open: http://localhost:8501
+
+
+### Key Features of Dashboard
+1. Real-time Occupied / Vacant decision
+2. Confidence score
+3. Signal Power (dB) and Estimated SNR
+4. Live Spectrum plot
+5. Live Waterfall display
+6. Antenna Profile selection (FM / Cellular / Wideband)
+7. Find Best Vacant Channel (automatic scanning & switching)
+8. Cognitive Radio action message
+9. Model Details
+Neuron Model: Leaky Integrate-and-Fire (LIF)
+Architecture: 128 → 64 → 2
+Encoding: Rate Coding
+β (Leak factor): 0.95
+Time steps: 50
+Training: Supervised (CrossEntropyLoss + Adam)
+Frequency Bands Used
+
+
+
+
+
