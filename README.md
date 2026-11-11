@@ -97,7 +97,51 @@ Encoding: Rate Coding
 β (Leak factor): 0.95
 Time steps: 50
 Training: Supervised (CrossEntropyLoss + Adam)
-Frequency Bands Used
+
+
+## Frequency Bands Used
+
+| Purpose                        | Frequency Range                          |
+|--------------------------------|------------------------------------------|
+| Live Hardware Testing          | 88–108 MHz (FM) and 700–960 MHz (Cellular) |
+| Mendeley Dataset (Offline)     | 2.4 GHz                                  |
+| RTL-SDR Blog V3 Limit          | ~500 kHz to 1.766 GHz                    |
+
+---
+
+## Results Summary
+
+- **Synthetic Data**: High accuracy (up to ~100% under controlled conditions)
+- **Real Multipath Dataset (Hybrid CNN+SNN)**: **83.54%** Validation Accuracy
+- **Live Hardware**: Successfully detects Occupied and Vacant channels on FM and low-band cellular frequencies
+
+---
+
+## Team
+
+- A L Gowripriya (1BI23ET001)
+- Jeevika A N (1BI23ET021)
+- N Thanushree (1BI23ET035)
+- Y G S Shreeraksha (1BI23ET054)
+
+**Guide**: Prof. Ranjana K  
+**Institution**: Bangalore Institute of Technology
+
+---
+
+## Future Work
+
+- Multi-class modulation recognition on hardware
+- STDP / unsupervised learning
+- Cooperative spectrum sensing
+- Deployment on neuromorphic hardware
+- Energy consumption measurement
+
+---
+
+## License
+
+This project is intended for academic and educational purposes.
 
 
 
