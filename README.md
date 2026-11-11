@@ -20,3 +20,6 @@ This project implements a low-power Spiking Neural Network (SNN) for binary spec
 ---
 
 ## System Architecture
+Antenna → RTL-SDR Blog V3 → IQ Capture → Magnitude + Normalization
+→ Rate Coding → LIF-SNN (128→64→2) → Occupied/Vacant Decision
+→ Cognitive Radio Layer → Streamlit Dashboard
