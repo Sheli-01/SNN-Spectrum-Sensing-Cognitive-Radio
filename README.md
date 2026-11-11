@@ -23,3 +23,59 @@ This project implements a low-power Spiking Neural Network (SNN) for binary spec
 Antenna → RTL-SDR Blog V3 → IQ Capture → Magnitude + Normalization
 → Rate Coding → LIF-SNN (128→64→2) → Occupied/Vacant Decision
 → Cognitive Radio Layer → Streamlit Dashboard
+
+
+---
+
+## Hardware Requirements
+
+- Raspberry Pi 4 (4GB/8GB recommended)
+- RTL-SDR Blog V3
+- Suitable Antenna (Dipole recommended)
+- 5V 3A Power Supply
+- MicroSD Card (32GB+)
+
+## Software Requirements
+
+- Raspberry Pi OS (64-bit)
+- Python 3.9+
+- PyTorch
+- snnTorch
+- Streamlit
+- NumPy, SciPy, Matplotlib
+- rtl-sdr tools
+
+---
+
+## Repository Structure
+├── models/                  # Trained SNN weights (.pth files)
+├── src/
+│   ├── live_snn_sensing.py  # Terminal-based live sensing
+│   └── snn_dashboard.py     # Streamlit dashboard
+├── notebooks/               # Training notebooks (Phase 1 & Phase 2)
+├── images/                  # Block diagrams and dashboard screenshots
+├── docs/                    # Project report and presentation
+├── hardware/                # Hardware setup guide
+├── requirements.txt
+└── README.md
+
+
+
+---
+
+## How to Run
+
+### 1. Install Dependencies
+
+python -m venv snn_env
+source snn_env/bin/activate        # On Windows: snn_env\Scripts\activate
+pip install -r requirements.txt
+
+### 2. Run Terminal Live Sensing
+
+python src/live_snn_sensing.py
+
+### 3. Run Streamlit Dashboard
+   streamlit run src/snn_dashboard.py
+
+   Then open: http://localhost:8501
